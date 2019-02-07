@@ -7,3 +7,8 @@ file { '/etc/ntp.conf':
 package { 'ntp':
 	ensure => installed,
 }
+
+service { 'ntp':
+	ensure => running,
+	enable => true,
+}
